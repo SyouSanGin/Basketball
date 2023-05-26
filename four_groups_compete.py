@@ -73,7 +73,7 @@ class FourGroups:
         subid2 = idx_s_winner[1] % 10
         scale: float = self.groups_winner[mainid1][0][subid1][1] / (self.groups_winner[mainid1][0][subid1][1] + self.groups_winner[mainid2][0][subid2][1])
         if random.random() < scale:
-            self.info.append(f"{self.groups_winner[mainid1][0][subid1][0]} > {self.groups_winner[mainid2][0][subid2][0]}")
+            self.info.append((self.groups_winner[mainid1][0][subid1][0] , self.groups_winner[mainid2][0][subid2][0]))
             return self.groups_winner[mainid1][0][subid1][0], self.info
         else:
             self.info.append((self.groups_winner[mainid2][0][subid2][0], self.groups_winner[mainid1][0][subid1][0]))
